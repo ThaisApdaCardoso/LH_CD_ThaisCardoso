@@ -44,7 +44,20 @@ Para prever a nota do IMDb, foi desenvolvido um modelo de Machine Learning.
 
 ## Como Executar o Projeto
 
-**Execute o Notebook:** Abra e execute o arquivo `.ipynb` (`LH_CD_ThaisCardoso.ipynb`) em um ambiente Jupyter.
+1- **Clone o repositório:**
+    ```bash
+    git clone https://github.com/ThaisApdaCardoso/LH_CD_ThaisCardoso
+    ```
+2.  **Crie um ambiente virtual (recomendado):**
+    ```bash
+    python -m venv venv
+    source venv/bin/activate (No Windows: venv\Scripts\activate)
+    ```
+3.  **Instale as dependências:**
+    ```bash
+    pip install -r requirements.txt
+    ```
+4.  **Execute o Notebook:** Abra e execute o arquivo `.ipynb` (`LH_CD_ThaisCardoso.ipynb`) em um ambiente Jupyter.
 
 ---
 
