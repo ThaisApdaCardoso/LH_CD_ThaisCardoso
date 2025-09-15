@@ -44,7 +44,7 @@ Para prever a nota do IMDb, foi desenvolvido um modelo de Machine Learning.
 
 ## Como Executar o Projeto
 
-1- **Clone o repositório:**
+1. **Clone o repositório:**
     ```bash
     git clone https://github.com/ThaisApdaCardoso/LH_CD_ThaisCardoso
     ```
