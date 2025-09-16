@@ -25,7 +25,7 @@ Após o processo de limpeza e pré-processamento dos dados, a análise explorat�
 
 * **Recomendação Universal:** O filme **"Parasita" (Gisaengchung)** foi selecionado como a recomendação ideal. A escolha se baseia em suas altíssimas notas tanto da crítica (`Meta_score`) quanto do público (`IMDB_Rating`), além de seu apelo global, comprovado por suas múltiplas vitórias no Oscar 2020, incluindo Melhor Filme.
 * **Fatores de Sucesso Financeiro:**
-    * O fator numérico que tem maior correlação com o `Gross` (faturamento) é o **`No_of_Votes`**, com um coeficiente de **0.57**. Isso sugere que o engajamento e a popularidade de um filme são cruciais para o sucesso de bilheteria.
+    * O fator numérico que tem maior correlação com o `Gross` (faturamento) é o **`No_of_Votes`**, com um coeficiente de **0,57**. Isso sugere que o engajamento e a popularidade de um filme são cruciais para o sucesso de bilheteria.
     * Ao analisar os gêneros, ficou claro que as maiores médias de faturamento pertencem aos filmes que combinam **Ação, Aventura, Sci-Fi e Fantasia**, de preferência com um apelo **Familiar**.
 * **Insights do `Overview`:** Através de uma Nuvem de Palavras-chave, foi identificado que os temas mais comuns em filmes de sucesso têm uma natureza extremamente humana, girando em torno de conceitos como **vida (`life`), família (`family`), homem (`man`), mulher (`woman`) e suas jornadas (`find`, `story`, `world`)**.
 * **Descoberta através dos gráficos de dispersão:** foi confirmada uma forte correlação positiva entre a nota da crítica (`Meta_score`) e a nota do público (`IMDB_Rating`), validando a escolha dessas features para o modelo.
@@ -39,7 +39,7 @@ Para prever a nota do IMDb, foi desenvolvido um modelo de Machine Learning.
 * **Tipo de Problema:** **Regressão**, devido ao objetivo de prever a nota do IMDB, e se trata de um valor numérico.
 * **Variáveis Utilizadas:** `Meta_score`, `No_of_Votes`, `Gross` e `Genre_Principal`. A variável de gênero foi simplificada para conter apenas o gênero principal de cada filme e foi transformada em variáveis numéricas através de One-Hot Encoding.
 * **Modelo Escolhido:** Foi utilizado um modelo de **Regressão Linear** por sua simplicidade, rapidez e facilidade de interpretação.
-* **Performance:** O modelo alcançou um **RMSE (Raiz do Erro Quadrático Médio) de 0.21**, indicando que, em média, suas previsões erram a nota do IMDb por apenas 0.21 pontos, o que demonstra uma alta precisão do modelo. Ao ser testado com o filme "The Shawshank Redemption", o modelo previu uma nota de **9.28**, muito próxima da nota real de 9.3. Além disso, o modelo alcançou um excelente R² (Coeficiente de Determinação) de 0.8143, indicando que o modelo é muito preciso (errando em média apenas 0.21 pontos) e também consegue explicar 81,4% da variação nas notas do IMDb com base nas features selecionadas.
+* **Performance:** O modelo de Regressão Linear alcançou resultados muito positivos. O seu RMSE (Raiz do Erro Quadrático Médio) foi de apenas 0.21, demonstrando uma alta precisão nas previsões. Além disso, o R² (Coeficiente de Determinação) de 0.4721 confirma que as features escolhidas são relevantes, explicando 47,2% da variação nas notas dos filmes. Em um teste prático com o filme "The Shawshank Redemption", o modelo previu a nota de 9.28, sendo a nota real para o filme é de 9.3, o que reforça a sua utilidade como uma ferramenta de avaliação para o estúdio.
 
 ---
 
