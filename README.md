@@ -39,7 +39,7 @@ Para prever a nota do IMDb, foi desenvolvido um modelo de Machine Learning.
 * **Tipo de Problema:** **Regressão**, devido ao objetivo de prever a nota do IMDB, e se trata de um valor numérico.
 * **Variáveis Utilizadas:** `Meta_score`, `No_of_Votes`, `Gross` e `Genre_Principal`. A variável de gênero foi simplificada para conter apenas o gênero principal de cada filme e foi transformada em variáveis numéricas através de One-Hot Encoding.
 * **Modelo Escolhido:** Foi utilizado um modelo de **Regressão Linear** por sua simplicidade, rapidez e facilidade de interpretação.
-* **Performance:** O modelo de Regressão Linear alcançou resultados muito positivos. O seu RMSE (Raiz do Erro Quadrático Médio) foi de apenas **0,21**, demonstrando uma alta precisão nas previsões. Além disso, o R² (Coeficiente de Determinação) de **0,4721** confirma que as features escolhidas são relevantes, explicando 47,2% da variação nas notas dos filmes. Em um teste prático com o filme "The Shawshank Redemption", o modelo previu a nota de **9.28**, sendo a nota real para o filme é de 9.3, o que reforça a sua utilidade como uma ferramenta de avaliação para o estúdio.
+* **Performance:** O modelo de Regressão Linear alcançou resultados muito positivos. O seu RMSE (Raiz do Erro Quadrático Médio) foi de apenas **0,21**, demonstrando uma alta precisão nas previsões. Além disso, o R² (Coeficiente de Determinação) de **0,4721** confirma que as features escolhidas são relevantes, explicando 47,2% da variação nas notas dos filmes. Em um teste prático com o filme "The Shawshank Redemption", o modelo previu a nota de **9.28**, sendo a nota real para o filme de 9.3, o que reforça a sua utilidade como uma ferramenta de avaliação para o estúdio.
 
 ---
 
