@@ -4,13 +4,13 @@
 
 Este projeto foi desenvolvido como um estudo de caso de Ciência de Dados para a empresa Indicium. O cenário proposto envolve uma consultoria para um estúdio de Hollywood fictício, a **PProductions**, que busca orientação baseada em dados para decidir qual tipo de filme deve ser sua próxima grande produção.
 
-O objetivo é analisar um banco de dados cinematográfico para identificar fatores de sucesso, extrair insights e construir um modelo preditivo para estimar a nota do IMDB de um filme.
+O objetivo é analisar um banco de dados cinematográfico para identificar fatores de sucesso, extrair insights e construir um modelo de previsão para estimar a nota do IMDB de um filme.
 
 ---
 
 ## Objetivo
 
-Analisar detalhadamente uma base de dados de filmes para responder às seguintes questões:
+Analisar detalhadamente uma base de dados de filmes, identificando fatores de sucesso dessas obras e criando um modelo de previsão para estimar a nota no IMDB de um filme através de algumas características, além de responder às seguintes questões do estúdio:
 
 1.  **Recomendação Universal:** Qual filme seria a aposta mais segura para recomendar a um público geral?
 2.  **Fatores de Sucesso Financeiro:** Quais são os principais fatores que se relacionam com um alto `Gross` (faturamento)?
@@ -27,7 +27,8 @@ Após o processo de limpeza e pré-processamento dos dados, a análise explorat�
 * **Fatores de Sucesso Financeiro:**
     * O fator numérico que tem maior correlação com o `Gross` (faturamento) é o **`No_of_Votes`**, com um coeficiente de **0.57**. Isso sugere que o engajamento e a popularidade de um filme são cruciais para o sucesso de bilheteria.
     * Ao analisar os gêneros, ficou claro que as maiores médias de faturamento pertencem aos filmes que combinam **Ação, Aventura, Sci-Fi e Fantasia**, de preferência com um apelo **Familiar**.
-* **Insights do `Overview` (Resumo):** Através de uma Nuvem de Palavras-chave, foi identificado que os temas mais comuns em filmes de sucesso têm uma natureza extremamente humana, girando em torno de conceitos como **vida (`life`), família (`family`), homem (`man`), mulher (`woman`) e suas jornadas (`find`, `story`, `world`)**.
+* **Insights do `Overview`:** Através de uma Nuvem de Palavras-chave, foi identificado que os temas mais comuns em filmes de sucesso têm uma natureza extremamente humana, girando em torno de conceitos como **vida (`life`), família (`family`), homem (`man`), mulher (`woman`) e suas jornadas (`find`, `story`, `world`)**.
+* **Descoberta através dos gráficos de dispersão:** foi confirmada uma forte correlação positiva entre a nota da crítica (`Meta_score`) e a nota do público (`IMDB_Rating`), validando a escolha dessas features para o modelo.
 
 ---
 
@@ -38,7 +39,7 @@ Para prever a nota do IMDb, foi desenvolvido um modelo de Machine Learning.
 * **Tipo de Problema:** **Regressão**, devido ao objetivo de prever a nota do IMDB, e se trata de um valor numérico.
 * **Variáveis Utilizadas:** `Meta_score`, `No_of_Votes`, `Gross` e `Genre_Principal`. A variável de gênero foi simplificada para conter apenas o gênero principal de cada filme e foi transformada em variáveis numéricas através de One-Hot Encoding.
 * **Modelo Escolhido:** Foi utilizado um modelo de **Regressão Linear** por sua simplicidade, rapidez e facilidade de interpretação.
-* **Performance:** O modelo alcançou um **RMSE (Raiz do Erro Quadrático Médio) de 0.21**, indicando que, em média, suas previsões erram a nota do IMDb por apenas 0.21 pontos, o que demonstra uma alta precisão do modelo. Ao ser testado com o filme "The Shawshank Redemption", o modelo previu uma nota de **9.28**, muito próxima da nota real de 9.3.
+* **Performance:** O modelo alcançou um **RMSE (Raiz do Erro Quadrático Médio) de 0.21**, indicando que, em média, suas previsões erram a nota do IMDb por apenas 0.21 pontos, o que demonstra uma alta precisão do modelo. Ao ser testado com o filme "The Shawshank Redemption", o modelo previu uma nota de **9.28**, muito próxima da nota real de 9.3. Além disso, o modelo alcançou um excelente R² (Coeficiente de Determinação) de 0.8143, indicando que o modelo é muito preciso (errando em média apenas 0.21 pontos) e também consegue explicar 81,4% da variação nas notas do IMDb com base nas features selecionadas.
 
 ---
 
